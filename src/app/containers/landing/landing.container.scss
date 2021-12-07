@@ -1,0 +1,15 @@
+
+.tile {
+    border: solid 1px black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.30);
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.primary {
+    background-color: rgb(103, 58, 183);
+}

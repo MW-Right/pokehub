@@ -1,0 +1,84 @@
+<form [formGroup]="form" class="flex flex-row justify-content-space-between" w100 row>
+    <div class="male-pokemon" w50>
+        <h2 w100>Male Pokemon</h2>
+        <ng-container formArrayName="malePokemon">
+            <mat-table [dataSource]="malePokemon.controls" class="mat-elevation-z8" #maleTable>
+
+                <ng-container matColumnDef="Name">
+                    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element; let i = index">
+                        {{i + 1}}
+                    </mat-cell>
+                </ng-container>
+    
+                <ng-container *ngFor="let stat of statsList">
+                    <ng-container matColumnDef="{{stat}}">
+    
+                        <mat-header-cell *matHeaderCellDef>{{stat}}</mat-header-cell>
+    
+                        <mat-cell *matCellDef="let element;" [formGroup]="element">
+                            <mat-form-field class="stat-form-field" appearance="legacy" floatLabel="never">
+    
+                                <input matInput formControlName="{{stat}}" type="number" ([value])="element[stat]"/>
+    
+                            </mat-form-field>
+                        </mat-cell>
+    
+                    </ng-container>
+                </ng-container>
+    
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+            </mat-table>
+        </ng-container>
+
+        <div class="controls flex justify-content-centre">
+            <button mat-mini-fab color="primary" (click)="addPokemon(false)"><mat-icon>add</mat-icon></button>
+        </div>
+    </div>
+
+    <div class="centre-column">
+        <button class="refresh-button" mat-mini-fab (click)="findBestMatch()"><mat-icon>refresh</mat-icon></button>
+    </div>
+
+    <div class="waman-pokemon" w50>
+        <h2 w100>WAMAN Pokemon</h2>
+        <ng-container formArrayName="wamanPokemon">
+            <mat-table [dataSource]="wamanPokemon.controls" class="mat-elevation-z8" #wamanTable>
+
+                <ng-container matColumnDef="Name">
+                    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                    <mat-cell *matCellDef="let element; let i = index">
+                        {{i + 1}}
+                    </mat-cell>
+                </ng-container>
+    
+                <ng-container *ngFor="let stat of statsList">
+                    <ng-container matColumnDef="{{stat}}">
+    
+                        <mat-header-cell *matHeaderCellDef>{{stat}}</mat-header-cell>
+    
+                        <mat-cell *matCellDef="let element;" [formGroup]="element">
+                            <mat-form-field class="stat-form-field" appearance="legacy" floatLabel="never">
+    
+                                <input matInput formControlName="{{stat}}" type="number" ([value])="element[stat]"/>
+    
+                            </mat-form-field>
+                        </mat-cell>
+    
+                    </ng-container>
+                </ng-container>
+    
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+            </mat-table>
+        </ng-container>
+
+        <div class="controls flex justify-content-centre">
+            <button mat-mini-fab color="primary" (click)="addPokemon(true)"><mat-icon>add</mat-icon></button>
+        </div>
+
+    </div>
+</form>

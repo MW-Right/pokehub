@@ -1,0 +1,28 @@
+<!-- TODO: Landing area - image, stupid quote, title -->
+<div row>
+    <div w100>
+      <mat-grid-list cols="6" rowHeight="200px" [gutterSize]="'20px'">
+        <mat-grid-tile class="tile" hover-class="primary"
+          [colspan]="4"
+          [rowspan]="1">
+          {{ 'Welcome' | uppercase }}
+        </mat-grid-tile>
+        <mat-grid-tile class="tile" hover-class="primary"
+          [colspan]="2"
+          [rowspan]="2"
+          [routerLink]="['breeding']">
+          {{ 'Breeding' | uppercase }}
+        </mat-grid-tile>
+        <mat-grid-tile class="tile" hover-class="primary"
+          [colspan]="2"
+          [rowspan]="1">
+          {{ 'Placeholder' | uppercase }}
+        </mat-grid-tile>
+        <mat-grid-tile class="tile" hover-class="primary"
+          [colspan]="2"
+          [rowspan]="1">
+          {{ 'Placeholder' | uppercase }}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>

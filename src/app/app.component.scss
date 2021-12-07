@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+.app-header {
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+
+    .toolbar-header {
+        cursor: pointer;
+    }
+
+    .placeholder-icon-in-header {
+        height: 40px;
+        width: 40px;
+        background-color: gold;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.app-content {
+    width: 80%;
+    margin: 100px auto 0;
+}
