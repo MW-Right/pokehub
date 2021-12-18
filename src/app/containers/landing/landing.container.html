@@ -15,13 +15,15 @@
         </mat-grid-tile>
         <mat-grid-tile class="tile" hover-class="primary"
           [colspan]="2"
-          [rowspan]="1">
-          {{ 'Placeholder' | uppercase }}
+          [rowspan]="1"
+          [routerLink]="['natures']">
+          {{ 'Natures' | uppercase }}
         </mat-grid-tile>
         <mat-grid-tile class="tile" hover-class="primary"
           [colspan]="2"
-          [rowspan]="1">
-          {{ 'Placeholder' | uppercase }}
+          [rowspan]="1"
+          [routerLink]="['type-effectiveness']">
+          {{ 'Type Effectiveness' | uppercase }}
         </mat-grid-tile>
       </mat-grid-list>
     </div>

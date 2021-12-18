@@ -7,17 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { Width100ColumnDirective, Width25ColumnDirective, Width33ColumnDirective, Width50ColumnDirective, Width75ColumnDirective } from './directives';
 import { HoverClassDirective } from './directives/hover-class.directive';
-import { PokeBreedingContainerComponent, PokeLandingContainer } from './containers';
+import { PokeBreedingContainerComponent, PokeLandingContainer, PokeNaturesContainerComponent, PokeTypeEffectivenessContainerComponent } from './containers';
 import { PokemonBreedingFormComponent } from './components/breeding/breeding-form/breeding-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PokeTypeEffectivenessComponent } from './components/type-effectiveness/poke-type-effectiveness.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonBreedingFormComponent,
+    PokeTypeEffectivenessComponent,
     
     PokeBreedingContainerComponent,
     PokeLandingContainer,
+    PokeNaturesContainerComponent,
+    PokeTypeEffectivenessContainerComponent,
 
     HoverClassDirective,
     Width25ColumnDirective,

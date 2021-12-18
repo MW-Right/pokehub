@@ -8,3 +8,8 @@ Breeding
 - calc best combo given list
 - egg group
 - ditto clause
+
+Type Effectiveness
+
+Natures
+
